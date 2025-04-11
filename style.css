@@ -6,14 +6,46 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: "Lora";
+	src: url("assets/fonts/lora/Lora-VariableFont_wght.ttf") format("truetype");
+	font-weight: 100 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Inconsolata";
+	src: url("assets/fonts/inconsolata/Inconsolata-VariableFont_wdth\,wght.ttf")
+		format("truetype");
+	font-weight: 100 900;
+	font-style: normal;
+}
+
+/* Définition des variables de couleur et de police */
+:root {
+	--color-white: #2d2d2d;
+	--color-background-primary: #ffffff;
+	--color-background-secondary: #f4f4f4;
+	--color-border-separator: #3a3a3a;
+	--color-text-secondary: #757575;
+	--color-accent-primary: #8f19e8;
+	--color-accent-secondary: #a445ed;
+
+	--font-primary: "Inter", sans-serif;
+}
+
 * {
-	font-family: "Inter", sans-serif;
-	color: #ffffff;
+	-webkit-transition: 0.4s;
+	font-family: var(--font-primary); /* Utilisation de la variable de police */
+	color: var(--color-white); 
+	outline: none;
 }
 
 body {
 	padding: 0px 20%;
-	background-color: #050505;
+	background-color: var(
+		--color-background-primary
+	); 
 }
 
 header {
@@ -38,16 +70,21 @@ header > div > div {
 }
 
 .Seach {
+	margin-top: 15px;
 	display: grid;
 	grid-template-columns: 5fr 1fr;
 	border-radius: 16px;
-	background-color: #1f1f1f;
+	background-color: var(
+		--color-background-secondary
+	); 
 	padding: 15px;
 }
 
 .Seach > * {
 	border: 0;
-	background-color: #1f1f1f;
+	background-color: var(
+		--color-background-secondary
+	); 
 }
 
 .Info button {
@@ -62,7 +99,7 @@ header > div > div {
 }
 
 .meanings > div:nth-child(1) > hr {
-	border-bottom: #3a3a3a solid 1px;
+	border-bottom: var(--color-border-separator) solid 1px; 
 	width: 100%;
 	margin-left: 20px;
 }
@@ -70,15 +107,21 @@ header > div > div {
 .meanings > p {
 	font-weight: 400;
 	font-size: 20px;
-	color: #757575;
+	color: var(
+		--color-text-secondary
+	); 
 }
 
 .meanings > ul > li::marker {
-	color: #8f19e8;
+	color: var(
+		--color-accent-primary
+	); 
 }
 
 .meanings > ul > li > span {
-	color: #757575;
+	color: var(
+		--color-text-secondary
+	); 
 }
 
 .meanings > ul > li {
@@ -86,7 +129,7 @@ header > div > div {
 }
 
 .meanings > ul > li footer {
-	border-top: #3a3a3a 1px solid;
+	border-top: var(--color-border-separator) 1px solid; 
 }
 
 .meanings > div:last-child {
@@ -96,7 +139,9 @@ header > div > div {
 }
 
 .meanings > div:last-child > p:last-child {
-	color: #a445ed;
+	color: var(
+		--color-accent-secondary
+	); 
 	font-weight: 700;
 	font-size: 20px;
 }
@@ -110,7 +155,9 @@ footer > p {
 	text-decoration-style: solid;
 	text-decoration-offset: 0%;
 	text-decoration-thickness: 0%;
-	color: #757575;
+	color: var(
+		--color-text-secondary
+	); 
 }
 
 footer > a {
@@ -122,5 +169,23 @@ footer > a {
 	text-decoration-style: solid;
 	text-decoration-offset: 0%;
 	text-decoration-thickness: 0%;
-	color: #ffffff;
+	color: var(--color-white); 
+}
+
+div.Info,
+footer {
+	display: none;
+}
+
+select {
+	width: 10rem;
+	background-color: transparent;
+	border: 1px solid transparent;
+	cursor: pointer;
+	appearance: none;
+}
+
+select > option {
+	border: 1px solid transparent;
+	background-color: var(--color-background-secondary);
 }

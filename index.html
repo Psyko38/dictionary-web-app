@@ -13,88 +13,49 @@
 
 		<title>Frontend Mentor | Dictionary web app</title>
 		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="W3schools.css" />
 	</head>
 	<body>
 		<header>
 			<img src="assets/images/logo.svg" alt="ico" />
 			<div>
 				<div>
-					<p>Sans Serif</p>
-					<img src="assets/images/icon-arrow-down.svg" alt="arrow" />
+					<select name="font" id="font">
+						<option value="Inter">Inter</option>
+						<option value="Lora">Lora</option>
+						<option value="Inconsolata">Inconsolata</option>
+					</select>
 				</div>
 				<hr />
 				<div>
-					<button>Cool BTN</button>
+					<label class="switch">
+						<input type="checkbox" id="checkbox" />
+						<span class="slider round"></span>
+					</label>
 					<img src="assets/images/icon-moon.svg" alt="moon" />
 				</div>
 			</div>
 		</header>
 		<main>
 			<div class="Seach">
-				<input type="text" />
-				<button>
+				<input type="text" id="Search" />
+				<button id="BtnShearch">
 					<img src="assets/images/icon-search.svg" alt="Search" />
 				</button>
 			</div>
 			<div class="Info">
 				<div>
-					<h2>keyboard</h2>
-					<p>/ˈkiːbɔːd/</p>
+					<h2></h2>
+					<p></p>
 				</div>
-				<button>
+				<button id="song">
 					<img src="assets/images/icon-play.svg" alt="Go" />
 				</button>
-			</div>
-			<div class="meanings">
-				<div>
-					<p>noun</p>
-					<hr />
-				</div>
-				<p>Meaning</p>
-				<ul>
-					<li>
-						(etc.) A set of keys used to operate a typewriter,
-						computer etc.
-					</li>
-					<li>
-						A component of many instruments including the piano,
-						organ, and harpsichord consisting of usually black and
-						white keys that cause different tones to be produced
-						when struck.
-					</li>
-					<li>
-						A device with keys of a musical keyboard, used to
-						control electronic sound-producing devices which may be
-						built into or separate from the keyboard device.
-					</li>
-				</ul>
-				<div>
-					<p>Synonyms</p>
-					<p>electronic keyboard</p>
-				</div>
-			</div>
-			<div class="meanings">
-				<div>
-					<p>verb</p>
-					<hr />
-				</div>
-				<p>Meaning</p>
-				<ul>
-					<li>
-						<p>To type on a computer keyboard.</p>
-						<span>
-							“Keyboarding is the part of this job I hate the
-							most.”
-						</span>
-					</li>
-				</ul>
 			</div>
 		</main>
 		<footer>
 			<p>Source</p>
-			<a href="https://en.wiktionary.org/wiki/keyboard"
-				>https://en.wiktionary.org/wiki/keyboard</a
-			>
+			<a href=""></a>
 		</footer>
 	</body>
 	<script src="index.js"></script>
